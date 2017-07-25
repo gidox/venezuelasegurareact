@@ -11,6 +11,7 @@ const Loader = () => (
         margin: '150px 25%',
         animation: 'fa-spin 2s infinite linear',
       }}
+      animate
     />
   </div>
   );

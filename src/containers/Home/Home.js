@@ -5,6 +5,18 @@ import newsApi from 'api/newsApi';
 import MapPoly from 'components/MapPoly/MapPoly';
 import Loader from 'components/Loader/Loader';
 import 'containers/Home/Home.css';
+import { GridList } from 'material-ui/GridList';
+
+const stylesGrid = {
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+  },
+  gridList: {
+    width: '47vw',
+  },
+};
 
 const styles = {
   root: {
@@ -80,16 +92,23 @@ class Home extends Component {
         </div>
         <div className="cardscontent">
           <div style={styles.root}>
-            {this.state.news.map(news =>
-              (<NewsCard
-                key={news.suceso_id.toString()}
-                id={news.suceso_id}
-                title={news.titulo}
-                date={news.fecha_suceso}
-                victim={news.nombre_victima}
-                link={news.fuente}
-                description={news.resena}
-              />))}
+            <GridList
+              cols={2}
+              cellHeight={400}
+              padding={10}
+              style={stylesGrid.gridList}
+            >
+              {this.state.news.map(news =>
+                (<NewsCard
+                  key={news.suceso_id.toString()}
+                  id={news.suceso_id}
+                  title={news.titulo}
+                  date={news.fecha_suceso}
+                  victim={news.nombre_victima}
+                  link={news.fuente}
+                  description={news.resena}
+                />))}
+            </GridList>
           </div>
           {this.state.loading && (
           <Loader />
