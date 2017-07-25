@@ -18,9 +18,10 @@ class Header extends Component {
     return (
       <div>
         <AppBar
-          title="Title"
+          title="Venezuela Segura"
           iconClassNameRight="muidocs-icon-navigation-expand-more"
           onLeftIconButtonTouchTap={this.handleToggle}
+          style={{ position: 'fixed', top: '0' }}
         />
         <Drawer open={this.state.open}>
           <MenuItem>Menu Item</MenuItem>

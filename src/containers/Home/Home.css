@@ -1,5 +1,11 @@
 .cardholder{
   /* padding: 0 7%; */
-  width: 50vw; 
-  height: 90vh;
+  width: 50vw;
+  height: 100vh;
+  float: right;
+  position: fixed;
+  left: 50%;
+}
+.cardscontent{
+  padding-top: 80px;
 }
