@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { withGoogleMap, GoogleMap, Polygon } from 'react-google-maps';
 import withScriptjs from 'react-google-maps/lib/async/withScriptjs';
-import FaSpinner from 'react-icons/lib/fa/spinner';
 import noop from 'lodash/noop';
+import Loader from 'components/Loader/Loader';
 import remove from 'lodash/remove';
 // eslint-disable-next-line no-unused-vars
 const cachamay = [
@@ -161,17 +161,7 @@ class MapPoly extends Component {
       <AsyncGettingStartedExampleGoogleMap
         googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtdHFoBIbSMK-aRw5ygDS9ynkJWVeq7lg&v=3"
         loadingElement={
-          <div style={{ height: '100%' }}>
-            <FaSpinner
-              style={{
-                display: 'block',
-                width: '80px',
-                height: '80px',
-                margin: '150px auto',
-                animation: 'fa-spin 2s infinite linear',
-              }}
-            />
-          </div>
+          <Loader />
         }
         containerElement={
           <div style={{ height: '100%' }} />

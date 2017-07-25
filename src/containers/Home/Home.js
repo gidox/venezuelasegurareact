@@ -3,11 +3,8 @@ import React, { Component } from 'react';
 import NewsCard from 'components/NewsCard/NewsCard';
 import newsApi from 'api/newsApi';
 import MapPoly from 'components/MapPoly/MapPoly';
+import Loader from 'components/Loader/Loader';
 import 'containers/Home/Home.css';
-
-
-// Wrap all `react-google-maps` components with `withGoogleMap` HOC
-// and name it GettingStartedGoogleMap
 
 const styles = {
   root: {
@@ -37,7 +34,9 @@ class Home extends Component {
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
   }
+  // eslint-disable-next-line consistent-return
   async initialFetch() {
+    if (!this.state.news) return this.setState({ loading: false });
     const news = await newsApi.getNews(this.state.page, 10);
     // const poly = await newsApi.getPoly();
     this.setState({
@@ -92,6 +91,9 @@ class Home extends Component {
                 description={news.resena}
               />))}
           </div>
+          {this.state.loading && (
+          <Loader />
+          )}
         </div>
 
       </div>
