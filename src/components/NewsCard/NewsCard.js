@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Card, CardActions, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
+import Moment from 'react-moment';
 // import IconButton from 'material-ui/IconButton';
 // import Subheader from 'material-ui/Subheader';
 // import InsertLink from 'material-ui/svg-icons/editor/insert-link';
@@ -34,18 +35,6 @@ class NewsCard extends Component {
       open: false,
     };
   }
-  handleOpen() {
-    this.setState({
-      open: true,
-    });
-  }
-
-  handleClose() {
-    this.setState({
-      open: false,
-    });
-  }
-
   render() {
     return (
       <Card key={this.props.id}>
@@ -55,6 +44,8 @@ class NewsCard extends Component {
           <img style={styleGrid.imgResponsive} src={`http://34.229.201.249/img/${this.props.id}.jpg`} alt={this.props.id} />
         </CardMedia>
         <CardText>
+          <strong><Moment date={this.props.date} format="DD/MM/YYYY hh:mm a" /></strong>
+          <br />
           {`${this.props.description.substring(0, 150)}...`}
         </CardText>
         <CardActions>
@@ -71,7 +62,7 @@ NewsCard.propTypes = {
   link: PropTypes.string,
   // victim: PropTypes.string,
   description: PropTypes.string,
-  // date: PropTypes.string,
+  date: PropTypes.string,
 
 };
 
