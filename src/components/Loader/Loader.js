@@ -1,17 +1,25 @@
 import React from 'react';
-import FaSpinner from 'react-icons/lib/fa/spinner';
+import RefreshIndicator from 'material-ui/RefreshIndicator';
+
+const style = {
+  container: {
+    position: 'relative',
+    margin: '0 20vw',
+  },
+  refresh: {
+    display: 'inline-block',
+    position: 'relative',
+  },
+};
 
 const Loader = () => (
-  <div style={{ height: '100%' }}>
-    <FaSpinner
-      style={{
-        display: 'block',
-        width: '80px',
-        height: '80px',
-        margin: '150px 25%',
-        animation: 'fa-spin 2s infinite linear',
-      }}
-      animate
+  <div style={style.container}>
+    <RefreshIndicator
+      size={40}
+      left={10}
+      top={0}
+      status="loading"
+      style={style.refresh}
     />
   </div>
   );

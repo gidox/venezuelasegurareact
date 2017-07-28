@@ -15,19 +15,6 @@ const styleGrid = {
     height: '200',
   },
 };
-// const actions = [
-//   <FlatButton
-//     label="Cancel"
-//     primary
-//     onTouchTap={this.handleClose}
-//   />,
-//   <FlatButton
-//     label="Submit"
-//     primary
-//     keyboardFocused
-//     onTouchTap={this.handleClose}
-//   />,
-// ];
 class NewsCard extends Component {
   constructor(props) {
     super(props);
