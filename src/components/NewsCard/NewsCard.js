@@ -33,7 +33,7 @@ class NewsCard extends Component {
         <CardText>
           <strong><Moment date={this.props.date} format="DD/MM/YYYY hh:mm a" /></strong>
           <br />
-          {`${this.props.description.substring(0, 150)}...`}
+          {this.props.description ? `${this.props.description.substring(0, 150)}..` : `${this.props.description}`}
         </CardText>
         <CardActions>
           <RaisedButton label="Mas informacion" primary href={this.props.link} target="_blank" />
