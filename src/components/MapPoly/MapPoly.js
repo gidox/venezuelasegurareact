@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withGoogleMap, GoogleMap, Polygon } from 'react-google-maps';
+import { withGoogleMap, GoogleMap, Polygon, Marker } from 'react-google-maps';
 import withScriptjs from 'react-google-maps/lib/async/withScriptjs';
 import noop from 'lodash/noop';
 import Loader from 'components/Loader/Loader';
@@ -154,6 +154,10 @@ const AsyncGettingStartedExampleGoogleMap = withScriptjs(
         onClick={props.onMapClick}
 
       >
+        <Marker
+          position={{ lat: 8.314839, lng: -62.726316 }}
+          label={{ text: '238 homicidios', color: '#000', fontSize: '16px', fontWeight: 'bold' }}
+        />
         {props.parroquias.map((parroquia, index) =>
           (<Polygon
             options={parroquia.style}
