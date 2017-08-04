@@ -9,15 +9,17 @@ const cachamay = [
   { lat: 8.33414, lng: -62.71554 },
   { lat: 8.33758, lng: -62.71425 },
   { lat: 8.33932, lng: -62.71674 },
-  { lat: 8.34383, lng: -62.72241 },
+  { lat: 8.3465, lng: -62.72111 },
   { lat: 8.3423, lng: -62.74713 },
   { lat: 8.33567, lng: -62.76481 },
-  { lat: 8.31516, lng: -62.75979 },
-  { lat: 8.29703, lng: -62.75202 },
+  { lat: 8.3359, lng: -62.76882 }, //   Intercecion unare cachamay  rio orinoco
+  { lat: 8.31995, lng: -62.75879 }, //
+  { lat: 8.2920, lng: -62.7477 }, // Makro  intercepcion unare cacha univer
   { lat: 8.30234, lng: -62.73138 },
   { lat: 8.29908, lng: -62.72012 },
-  { lat: 8.30194, lng: -62.7123 },
-  { lat: 8.3158, lng: -62.68722 },
+  { lat: 8.30280, lng: -62.7047 }, // parque cachamay
+  { lat: 8.30951, lng: -62.6947 },
+  { lat: 8.31698, lng: -62.68301 }, // fin este
 ];
 // eslint-disable-next-line no-unused-vars
 const universidad = [
@@ -30,19 +32,18 @@ const universidad = [
   { lat: 8.27134, lng: -62.7181 },
   { lat: 8.26365, lng: -62.7197 },
   { lat: 8.25724, lng: -62.71882 },
-  { lat: 8.2493, lng: -62.71795 },
-  { lat: 8.25448, lng: -62.72654 },
-  { lat: 8.25695, lng: -62.73046 },
-  { lat: 8.25984, lng: -62.73386 },
-  { lat: 8.26444, lng: -62.7296 },
-  { lat: 8.26504, lng: -62.73257 },
-  { lat: 8.26717, lng: -62.73435 },
-  { lat: 8.27397, lng: -62.73618 },
-  { lat: 8.28184, lng: -62.73952 },
-  { lat: 8.28835, lng: -62.74715 },
-  { lat: 8.29644, lng: -62.75005 },
-  { lat: 8.29901, lng: -62.73972 },
-  { lat: 8.30259, lng: -62.72975 },
+  { lat: 8.2495, lng: -62.71734 },
+  { lat: 8.24266, lng: -62.72021 },
+  { lat: 8.2428, lng: -62.7376 }, // fin unare este rio  intercecio unare universida
+  { lat: 8.2497, lng: -62.7363 }, // primera arriba
+  { lat: 8.2575, lng: -62.7327 }, // segunda arriba
+  { lat: 8.2665, lng: -62.7361 },
+  { lat: 8.2734, lng: -62.7368 },
+  { lat: 8.2766, lng: -62.73292 }, // mas al este unare
+  { lat: 8.2830, lng: -62.7403 },
+  { lat: 8.28635, lng: -62.744722 }, // Terminal
+  { lat: 8.2920, lng: -62.7477 }, // Makro  intercepcion unare cacha univer
+  { lat: 8.30234, lng: -62.73138 },
   { lat: 8.29933, lng: -62.71849 },
   { lat: 8.301, lng: -62.71016 },
   { lat: 8.30121, lng: -62.70698 },
@@ -63,48 +64,85 @@ const unare = [
   { lat: 8.15474, lng: -62.84695 },
   { lat: 8.16014, lng: -62.84495 },
   { lat: 8.16564, lng: -62.83906 },
-  { lat: 8.17794, lng: -62.84073 },
+  // {lat: 8.17794, lng: -62.84073},
   { lat: 8.1681, lng: -62.82569 },
   { lat: 8.15987, lng: -62.81936 },
   { lat: 8.15911, lng: -62.81372 },
   { lat: 8.16345, lng: -62.80704 },
-  { lat: 8.1773, lng: -62.81135 },
   { lat: 8.20436, lng: -62.7988 },
   { lat: 8.24161, lng: -62.76808 },
-  { lat: 8.24353, lng: -62.72294 },
-  { lat: 8.25155, lng: -62.72163 },
-  { lat: 8.25958, lng: -62.7272 },
-  { lat: 8.26247, lng: -62.73059 },
-  { lat: 8.26707, lng: -62.72633 },
-  { lat: 8.26767, lng: -62.72931 },
-  { lat: 8.2698, lng: -62.73109 },
-  { lat: 8.2766, lng: -62.73292 },
-  { lat: 8.28447, lng: -62.73626 },
-  { lat: 8.29098, lng: -62.74389 },
-  { lat: 8.29669, lng: -62.7485 },
-  { lat: 8.29824, lng: -62.75432 },
-  { lat: 8.30245, lng: -62.7592 },
-  { lat: 8.30802, lng: -62.76066 },
-  { lat: 8.31983, lng: -62.76562 },
-  { lat: 8.33541, lng: -62.76882 },
-  { lat: 8.3323, lng: -62.79158 },
+  { lat: 8.2428, lng: -62.7376 }, // fin unare este rio
+  { lat: 8.2497, lng: -62.7363 }, // primera arriba
+  { lat: 8.2575, lng: -62.7327 }, // segunda arriba
+  { lat: 8.2665, lng: -62.7361 },
+  { lat: 8.2734, lng: -62.7368 },
+  { lat: 8.2766, lng: -62.73292 }, // mas al este unare
+  { lat: 8.2830, lng: -62.7403 },
+  { lat: 8.28635, lng: -62.744722 }, // Terminal
+  { lat: 8.2920, lng: -62.7477 }, // Makro
+  { lat: 8.2950, lng: -62.7493 },
+  { lat: 8.31995, lng: -62.75879 }, //
+  { lat: 8.3359, lng: -62.76882 }, //   Intercecion unare cachamay  rio orinoco
   { lat: 8.32818, lng: -62.80611 },
   { lat: 8.31983, lng: -62.812 },
-  { lat: 8.30978, lng: -62.82132 },
   { lat: 8.30024, lng: -62.82774 },
-  { lat: 8.29059, lng: -62.83006 },
-  { lat: 8.29163, lng: -62.83877 },
-  { lat: 8.28689, lng: -62.8437 },
   { lat: 8.2839, lng: -62.85211 },
-  { lat: 8.27926, lng: -62.85704 },
   { lat: 8.2736, lng: -62.86472 },
   { lat: 8.27084, lng: -62.87292 },
-  { lat: 8.26688, lng: -62.89055 },
   { lat: 8.26599, lng: -62.90106 },
   { lat: 8.27902, lng: -62.94557 },
   { lat: 8.2514, lng: -62.95967 },
   { lat: 8.22581, lng: -62.97256 },
+  { lat: 8.21101, lng: -62.95988 },
+  { lat: 8.20904, lng: -62.93732 },
 
+];
+const dalla = [
+  { lat: 8.34050, lng: -62.71189 }, // Intercon Puente Angosturita dalla con simon bolivar
+  { lat: 8.32598, lng: -62.69794 }, // campo rojo
+  { lat: 8.32309, lng: -62.69142 }, // Puente Campo Rojo
+  { lat: 8.31902, lng: -62.66601 }, // Puente Macagua
+  { lat: 8.31664, lng: -62.65932 },
+  { lat: 8.27638, lng: -62.67082 }, // Interseccion Dalla con Pozo Verd
+  { lat: 8.25476, lng: -62.70783 }, //   8.25476815882098,-62.70783918987877
+  { lat: 8.23595, lng: -62.71905 }, //   8.235955375848445,-62.719058990478516
+  { lat: 8.23442, lng: -62.74244 }, //
+  { lat: 8.20520, lng: -62.77180 }, //   8.205203920492115,-62.761802673339844
+  { lat: 8.15609, lng: -62.79477 }, // 1 era Interseccion Presa carhuachi Dalla con Pozo Verd
+  { lat: 8.15983, lng: -62.76388 },
+  { lat: 8.22780, lng: -62.71444 },
+  { lat: 8.29201, lng: -62.63401 }, // en via al pao
+  { lat: 8.31976, lng: -62.6422 }, // Buen retiro
+  { lat: 8.33201, lng: -62.64478 }, // Cementerio semaforo bomba
+  { lat: 8.33847, lng: -62.65588 }, // Redoma el dorado
+  { lat: 8.34220, lng: -62.67554 }, // Doña Barbara
+  { lat: 8.34815, lng: -62.68884 }, //Bomba Borges
+];
+const simonbolivar = [
+  { lat: 8.34815, lng: -62.68884 }, // Bomba Borges
+  { lat: 8.34220, lng: -62.67554 }, // Doña Barbara
+  { lat: 8.33847, lng: -62.65588 }, // Redoma el dorado
+  { lat: 8.34416, lng: -62.65056 }, // alcacranes hidrobolivar
+  { lat: 8.36089, lng: -62.64888 }, // mercado el gallo bajando
+  { lat: 8.36131, lng: -62.64644 }, // cerro el gallo bajando
+  { lat: 8.36522, lng: -62.64287 }, // cerro el gallo
+  { lat: 8.36751, lng: -62.64754 }, // batallas pricipal
+  { lat: 8.37192, lng: -62.65262 }, // batallas
+  { lat: 8.37944, lng: -62.65850 }, // Intercon muelle san felix con 11deabril
+  { lat: 8.34891, lng: -62.71605 }, // limite norte
+  { lat: 8.34050, lng: -62.71189 }, //Intercon Puente Angosturita dalla con simon bolivar
+];
+const chirica = [
+  { lat: 8.33847, lng: -62.65588 }, // Redoma el dorado
+  { lat: 8.34416, lng: -62.65056 }, // alcacranes hidrobolivar
+  { lat: 8.36089, lng: -62.64888 }, // mercado el gallo bajando
+  { lat: 8.36131, lng: -62.64644 }, // cerro el gallo bajando
+  { lat: 8.36522, lng: -62.64287 }, // cerro el gallo
+  { lat: 8.36377, lng: -62.63925 }, // cerro el gallo americas
+  { lat: 8.31562, lng: -62.61726 }, // cruce rosario mas arriba
+  { lat: 8.31613, lng: -62.6418 }, // Buen retiro
+  { lat: 8.31976, lng: -62.6422 }, // Buen retiro
+  { lat: 8.33201, lng: -62.64478 }, //Cementerio semaforo bomba
 ];
 const AsyncGettingStartedExampleGoogleMap = withScriptjs(
   withGoogleMap(
@@ -144,17 +182,27 @@ class MapPoly extends Component {
           name: 'universidad',
           data: universidad,
           style: { fillColor: '#FFEB3B', fillOpacity: '0.35', strokeColor: '#FFEB3B', strokeOpacity: '0.8', strokeWeight: '3' } },
+        { id: 4,
+          name: 'dalla',
+          data: dalla,
+          style: { fillColor: '#663399', fillOpacity: '0.35', strokeColor: '#663399', strokeOpacity: '0.8', strokeWeight: '3' } },
+        { id: 5,
+          name: 'simonbolivar',
+          data: simonbolivar,
+          style: { fillColor: '#22A7F0', fillOpacity: '0.35', strokeColor: '#22A7F0', strokeOpacity: '0.8', strokeWeight: '3' } },
+        { id: 6,
+          name: 'chirica',
+          data: chirica,
+          style: { fillColor: '#F9690E', fillOpacity: '0.35', strokeColor: '#F9690E', strokeOpacity: '0.8', strokeWeight: '3' } },
       ],
     };
     this.handlePolyClick = this.handlePolyClick.bind(this);
   }
   handlePolyClick(id) {
-    console.log(this.state);
     const chunk = remove(this.state.parroquias, (n, i) => i === id);
     this.setState({
       parroquias: chunk,
     });
-    console.log(id);
   }
   render() {
     return (
