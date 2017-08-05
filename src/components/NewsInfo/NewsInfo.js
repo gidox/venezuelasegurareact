@@ -36,7 +36,7 @@ export default class NewsInfo extends Component {
         <CardMedia
           overlay={<CardTitle title={this.state.new.title} subtitle="Overlay subtitle" />}
         >
-          <img src={`http://34.229.201.249/img/${this.state.new.id}.jpg`} alt="" />
+          <img src={`http://34.229.201.249/img/${this.state.new.suceso_id}.jpg`} alt="" />
         </CardMedia>
         <CardTitle title="Card title" subtitle="Card subtitle" />
         <CardText>
