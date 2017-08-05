@@ -35,7 +35,6 @@ class Home extends Component {
   }
   async componentDidMount() {
     this.initialFetch();
-    console.log(this.state);
     window.addEventListener('scroll', this.handleScroll);
   }
   componentWillUnmount() {

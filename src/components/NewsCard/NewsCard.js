@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import { Card, CardActions, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
 import Moment from 'react-moment';
+import Dialog from 'material-ui/Dialog';
+import NewsInfo from 'components/NewsInfo/NewsInfo';
+
+
 // import IconButton from 'material-ui/IconButton';
 // import Subheader from 'material-ui/Subheader';
 // import InsertLink from 'material-ui/svg-icons/editor/insert-link';
@@ -21,6 +25,14 @@ class NewsCard extends Component {
     this.state = {
       open: false,
     };
+    this.handleOpen = this.handleOpen.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+  }
+  handleOpen() {
+    this.setState({ open: true });
+  }
+  handleClose() {
+    this.setState({ open: false });
   }
   render() {
     return (
@@ -36,7 +48,21 @@ class NewsCard extends Component {
           {this.props.description ? `${this.props.description.substring(0, 150)}..` : `${this.props.description}`}
         </CardText>
         <CardActions>
-          <RaisedButton label="Mas informacion" primary href={this.props.link} target="_blank" />
+          <RaisedButton
+            onTouchTap={this.handleOpen}
+            label="Mas informacion"
+            primary
+          />
+          <Dialog
+            modal={false}
+            autoScrollBodyContent
+            open={this.state.open}
+            onRequestClose={this.handleClose}
+          >
+            <NewsInfo
+              id={this.props.id}
+            />
+          </Dialog>
         </CardActions>
       </Card>
 
@@ -46,7 +72,7 @@ class NewsCard extends Component {
 NewsCard.propTypes = {
   id: PropTypes.number,
   title: PropTypes.string,
-  link: PropTypes.string,
+  // link: PropTypes.string,
   // victim: PropTypes.string,
   description: PropTypes.string,
   date: PropTypes.string,
