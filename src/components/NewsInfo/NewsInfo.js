@@ -56,6 +56,9 @@ export default class NewsInfo extends Component {
           <p>Victima: {this.state.new.nombre_victima}</p>
           <p>Edad: {this.state.new.edad}</p>
           <p>Sexo: {this.state.new.sexo}</p>
+          <p>Municipio: {this.state.new.municipio}</p>
+          <p>Parroquia: {this.state.new.parroquia}</p>
+          <p>Sector: {this.state.new.sector}</p>
           <p>Reseña: {this.state.new.mi_resena}</p>
         </CardText>
         {this.state.loading && (

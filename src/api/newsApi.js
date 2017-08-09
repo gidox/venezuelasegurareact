@@ -8,7 +8,7 @@ const newsApi = {
     return data.data;
   },
   async getNew(id) {
-    const response = await fetch(`${apiUrl}api/sucesos/find/${id}`);
+    const response = await fetch(`${apiUrl}api/sucesos/findsql/${id}`);
     const data = await response.json();
     return data;
   },
