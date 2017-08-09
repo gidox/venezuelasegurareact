@@ -5,7 +5,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import Moment from 'react-moment';
 import Dialog from 'material-ui/Dialog';
 import NewsInfo from 'components/NewsInfo/NewsInfo';
-
+import FlatButton from 'material-ui/FlatButton';
 
 // import IconButton from 'material-ui/IconButton';
 // import Subheader from 'material-ui/Subheader';
@@ -19,6 +19,11 @@ const styleGrid = {
     height: '200',
   },
 };
+const customContentStyle = {
+  width: '50%',
+  maxWidth: 'none',
+};
+
 class NewsCard extends Component {
   constructor(props) {
     super(props);
@@ -35,6 +40,14 @@ class NewsCard extends Component {
     this.setState({ open: false });
   }
   render() {
+    const actions = [
+      <FlatButton
+        label="Cerrar"
+        primary
+        onTouchTap={this.handleClose}
+      />,
+    ];
+
     return (
       <Card key={this.props.id}>
         <CardMedia
@@ -54,9 +67,12 @@ class NewsCard extends Component {
             primary
           />
           <Dialog
+            title="Informacion Completa"
             modal={false}
             autoScrollBodyContent
             open={this.state.open}
+            actions={actions}
+            contentStyle={customContentStyle}
             onRequestClose={this.handleClose}
           >
             <NewsInfo

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Tabs, Tab } from 'material-ui/Tabs';
 import { GridList } from 'material-ui/GridList';
 import NewsCard from 'components/NewsCard/NewsCard';
+import NewsFilter from 'components/NewsFilter/NewsFilter';
 import NewsPaper from 'react-icons/lib/fa/newspaper-o';
 import Bar from 'react-icons/lib/fa/bar-chart';
 
@@ -51,6 +52,7 @@ class TabsMenu extends Component {
           icon={<NewsPaper>phone</NewsPaper>}
           value="a"
         >
+          <NewsFilter />
           <br />
           <GridList
             cols={2}

@@ -10,7 +10,12 @@ const newsApi = {
   async getNew(id) {
     const response = await fetch(`${apiUrl}api/sucesos/find/${id}`);
     const data = await response.json();
-    return data.data;
+    return data;
+  },
+  async getDelitos() {
+    const response = await fetch(`${apiUrl}api/delitos/`);
+    const data = await response.json();
+    return data;
   },
 };
 
