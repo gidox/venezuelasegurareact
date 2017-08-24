@@ -103,20 +103,17 @@ const dalla = [
   { lat: 8.32309, lng: -62.69142 }, // Puente Campo Rojo
   { lat: 8.31902, lng: -62.66601 }, // Puente Macagua
   { lat: 8.31664, lng: -62.65932 },
-  { lat: 8.27638, lng: -62.67082 }, // Interseccion Dalla con Pozo Verd
-  { lat: 8.25476, lng: -62.70783 }, //   8.25476815882098,-62.70783918987877
-  { lat: 8.23595, lng: -62.71905 }, //   8.235955375848445,-62.719058990478516
-  { lat: 8.23442, lng: -62.74244 }, //
-  { lat: 8.20520, lng: -62.77180 }, //   8.205203920492115,-62.761802673339844
-  { lat: 8.15609, lng: -62.79477 }, // 1 era Interseccion Presa carhuachi Dalla con Pozo Verd
-  { lat: 8.15983, lng: -62.76388 },
-  { lat: 8.22780, lng: -62.71444 },
-  { lat: 8.29201, lng: -62.63401 }, // en via al pao
+  { lat: 8.27638, lng: -62.67082 }, // FRENTE AL ITALO
+  { lat: 8.25388, lng: -62.70915 }, //  Toma de agua toromuerto
+  { lat: 8.25000, lng: -62.70915 }, //  Fin sur
+  { lat: 8.24844, lng: -62.68773 }, //  Fin sur 2
+  { lat: 8.27859, lng: -62.65760 }, //  intermedio
+  { lat: 8.29201, lng: -62.63701 }, //  en via al pao
   { lat: 8.31976, lng: -62.6422 }, // Buen retiro
   { lat: 8.33201, lng: -62.64478 }, // Cementerio semaforo bomba
   { lat: 8.33847, lng: -62.65588 }, // Redoma el dorado
   { lat: 8.34220, lng: -62.67554 }, // Doña Barbara
-  { lat: 8.34815, lng: -62.68884 }, //Bomba Borges
+  { lat: 8.34815, lng: -62.68884 }, // Bomba Borges
 ];
 const simonbolivar = [
   { lat: 8.34815, lng: -62.68884 }, // Bomba Borges
@@ -130,7 +127,7 @@ const simonbolivar = [
   { lat: 8.37192, lng: -62.65262 }, // batallas
   { lat: 8.37944, lng: -62.65850 }, // Intercon muelle san felix con 11deabril
   { lat: 8.34891, lng: -62.71605 }, // limite norte
-  { lat: 8.34050, lng: -62.71189 }, //Intercon Puente Angosturita dalla con simon bolivar
+  { lat: 8.34050, lng: -62.71189 }, // Intercon Puente Angosturita dalla con simon bolivar
 ];
 const chirica = [
   { lat: 8.33847, lng: -62.65588 }, // Redoma el dorado
@@ -139,10 +136,37 @@ const chirica = [
   { lat: 8.36131, lng: -62.64644 }, // cerro el gallo bajando
   { lat: 8.36522, lng: -62.64287 }, // cerro el gallo
   { lat: 8.36377, lng: -62.63925 }, // cerro el gallo americas
-  { lat: 8.31562, lng: -62.61726 }, // cruce rosario mas arriba
+  { lat: 8.36052, lng: -62.63412 }, // once d abri 1 mayoo   BOD
+  { lat: 8.32594, lng: -62.62435 }, // entrada a trapichito
+  { lat: 8.31562, lng: -62.61726 }, // cruce rosario
+  { lat: 8.29859, lng: -62.59852 }, // Limite yocoima este via a upata
+  { lat: 8.28657, lng: -62.61219 }, // chirica vieja adentro
+  { lat: 8.28938, lng: -62.63668 }, // Limite yocoima frent a fracisca duarte
   { lat: 8.31613, lng: -62.6418 }, // Buen retiro
   { lat: 8.31976, lng: -62.6422 }, // Buen retiro
-  { lat: 8.33201, lng: -62.64478 }, //Cementerio semaforo bomba
+  { lat: 8.33201, lng: -62.64478 }, // Cementerio semaforobomba
+];
+const pozoverdeCoords = [
+  { lat: 8.25000, lng: -62.70915 }, // Ftrente a Toro Muerto  planta Acueducto
+  { lat: 8.24844, lng: -62.68773 }, // Bahia
+  { lat: 8.27859, lng: -62.65760 }, // intermedio
+  { lat: 8.28938, lng: -62.63668 }, // Limite yocoima frent a fracisca duarte
+
+  { lat: 8.27859, lng: -62.65760 }, // intermedio Interseccion dallacosta
+  { lat: 8.28938, lng: -62.63668 }, //  Limite yocoima frent a fracisca duarte
+
+  { lat: 8.28921, lng: -62.63651 }, // en via al pao curva 1
+
+  { lat: 8.28708, lng: -62.63408 }, // en via al pao curva 2
+  { lat: 8.28369, lng: -62.62915 }, // en via al pao 8.206053440215015,-62.7985382080078
+
+  { lat: 8.27793, lng: -62.62584 }, // en via al pao curva 5
+  { lat: 8.27793, lng: -62.62584 }, // en via al pao curva 6
+  { lat: 8.25666, lng: -62.62086 }, // en via al pao curva 6
+  { lat: 8.23204, lng: -62.61589 }, // en via al pao curva 7
+  { lat: 8.16049, lng: -62.6417 }, // Pozo verde
+  { lat: 8.15643, lng: -62.79441 }, // Fin sur  Carhuachi
+  { lat: 8.20843, lng: -62.77414 }, // Frente Tierra nueva
 ];
 const AsyncGettingStartedExampleGoogleMap = withScriptjs(
   withGoogleMap(
@@ -198,6 +222,10 @@ class MapPoly extends Component {
           name: 'chirica',
           data: chirica,
           style: { fillColor: '#F9690E', fillOpacity: '0.35', strokeColor: '#F9690E', strokeOpacity: '0.8', strokeWeight: '3' } },
+        { id: 7,
+          name: 'pozoverde',
+          data: pozoverdeCoords,
+          style: { fillColor: 'green', fillOpacity: '0.35', strokeColor: 'green', strokeOpacity: '0.8', strokeWeight: '3' } },
       ],
     };
     this.handlePolyClick = this.handlePolyClick.bind(this);
